@@ -1,7 +1,8 @@
-import 'package:debashish_task/scrollable_top_containers.dart';
+import 'package:debashish_task/widgets/scrollable_top_containers.dart';
 import 'package:flutter/material.dart';
 
-import 'categories.dart';
+import '../widgets/categories.dart';
+import '../widgets/offerings_list_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -85,6 +86,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10,
               ),
+              Offerings(),
             ],
           ),
         )));

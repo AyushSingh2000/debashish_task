@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'home_page.dart';
+import 'bottom_nav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: ChangeNotifierProvider<ValueNotifier<int>>.value(
+        value: ValueNotifier<int>(
+            0), //PageIndex is set to 0 to open first when when the app launches
+        child: Menu(),
+      ),
     );
   }
 }
